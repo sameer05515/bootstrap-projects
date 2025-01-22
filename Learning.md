@@ -48,3 +48,7 @@
 - What is Responsive design or `Responsive Layout`?
 - Which `new responsive class newly added in Bootstrap 5`?
 - what is `xxl` responsive class? Why it is added in **`Bootstrap 5`**?
+
+
+- **See related practicals**:
+  - See [here](./Bootstrap-5-Tutorial-For-Beginners/lesson-000)
