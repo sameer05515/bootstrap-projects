@@ -62,4 +62,4 @@
 
 - **See related practicals**:
   - See [here](./Bootstrap-5-Tutorial-For-Beginners/lesson-0003-live-poroject-01-grid-and-layout-design/)
-    - In this project we are going to design `IBM's 2 column layout`
+  - In this project we are going to design `IBM's 2 column layout`
