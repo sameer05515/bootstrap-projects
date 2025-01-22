@@ -3,6 +3,9 @@
 # Bootstrap 5: Key terminology and questions
 
 > Answers will not be written here. we are only collecting questions.
+> **Important**:  
+>    - कृपया केवल प्रश्नों को देखकर घबराएं नहीं। हमने प्रश्नों को इस प्रकार से व्यवस्थित किया है कि प्रत्येक अगला प्रश्न श्रृंखला में पिछले प्रश्नों के लिए संकेत देता है। :)
+>   - Please dont panic just by seeing the questions. We have arranged them in such a manner that every subsequent question contains a hint for the earlier questions in the series. :)
 
 ## Basic
 - Responsive design?
