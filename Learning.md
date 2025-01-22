@@ -45,3 +45,6 @@
 
 
 ## [Responsive Grid Layouts](https://www.youtube.com/watch?v=hWcFqtQI3qE&list=PLp50dWW_m40WzAh2wY0a9iFYb0QlPzoxx&index=5)
+- What is Responsive design or `Responsive Layout`?
+- Which `new responsive class newly added in Bootstrap 5`?
+- what is `xxl` responsive class? Why it is added in **`Bootstrap 5`**?
