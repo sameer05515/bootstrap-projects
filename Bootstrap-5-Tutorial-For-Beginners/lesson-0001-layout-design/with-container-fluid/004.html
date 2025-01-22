@@ -43,7 +43,7 @@
 
       <div class="content">
         <div class="row">
-          <div class="col-3 sidebar">Left sidebar</div>
+          <div id="sidebar" class="col-3 sidebar">Left sidebar</div>
           <div class="col-3 main-content">
             Main Content
             <br />
@@ -66,5 +66,16 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      for (let i = 0; i < 100; i++) {
+        // sidebar.innerHTML += `Item# ${i+1}` + "<br/>";
+
+        sidebar.innerHTML += `<div class="${
+          i % 2 === 0 ? "bg-blue-100" : "bg-blue-600"
+        }">Item# ${i + 1}</div>`;
+        
+      }
+    </script>
   </body>
 </html>

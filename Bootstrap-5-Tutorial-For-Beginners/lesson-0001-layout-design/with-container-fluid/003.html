@@ -74,7 +74,12 @@
     <script>
       const sidebar = document.getElementById("sidebar");
       for (let i = 0; i < 100; i++) {
-        sidebar.innerHTML += `Item# ${i+1}` + "<br/>";
+        // sidebar.innerHTML += `Item# ${i+1}` + "<br/>";
+
+        sidebar.innerHTML += `<div class="${
+          i % 2 === 0 ? "bg-primary" : "bg-success"
+        }">Item# ${i + 1}</div>`;
+        
       }
     </script>
   </body>
