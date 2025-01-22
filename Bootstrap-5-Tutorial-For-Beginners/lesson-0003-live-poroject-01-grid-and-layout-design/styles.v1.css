@@ -1,5 +1,12 @@
 .sidebar{
+    margin-top: 24px;
     background-color: #777;
-    max-height: 600px;
+    max-height: 350px;
     overflow-y: auto;
+}
+
+.list-group-item{
+    background-color: transparent;
+    color: #ddd;
+    border-bottom: 5px solid #ddd;
 }
