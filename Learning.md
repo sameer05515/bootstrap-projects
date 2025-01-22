@@ -40,4 +40,5 @@
   - Implementing Container with Header, Footer and 2 Columns Layout
   - Implementing Container with Header, Footer and 3 Columns Layout
 
-
+- **See related practicals**:
+  - See [here](./Bootstrap-5-Tutorial-For-Beginners/lesson-0001-layout-design/001-starter-template.html)
