@@ -54,3 +54,11 @@
 
 - **See related practicals**:
   - See [here](./Bootstrap-5-Tutorial-For-Beginners/lesson-0002-responsive-layouts/)
+
+
+
+## [Live Project Example](https://www.youtube.com/watch?v=uwL5ZA4Rfac&list=PLp50dWW_m40WzAh2wY0a9iFYb0QlPzoxx&index=6)
+
+
+- **See related practicals**:
+  - See [here](./Bootstrap-5-Tutorial-For-Beginners/lesson-0003-live-poroject-01-grid-and-layout-design/)
