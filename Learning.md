@@ -42,3 +42,6 @@
 
 - **See related practicals**:
   - See [here](./Bootstrap-5-Tutorial-For-Beginners/lesson-0001-layout-design/001-starter-template.html)
+
+
+## [Responsive Grid Layouts](https://www.youtube.com/watch?v=hWcFqtQI3qE&list=PLp50dWW_m40WzAh2wY0a9iFYb0QlPzoxx&index=5)
