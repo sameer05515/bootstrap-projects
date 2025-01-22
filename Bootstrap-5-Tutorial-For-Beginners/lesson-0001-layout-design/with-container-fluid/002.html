@@ -15,7 +15,11 @@
         background-color: white;
       }
       .header {
-        height: 40px;
+        height: 80px;
+      }
+      .sidebar {
+        max-height: 500px;
+        overflow-y: auto;
       }
       .content {
         min-height: 500px;
@@ -39,7 +43,9 @@
 
       <div class="content">
         <div class="row">
-          <div id="sidebar" class="col-3 sidebar">Left sidebar</div>
+          <div id="sidebar" class="col-3 sidebar">
+            <div><b>Left sidebar</b></div>
+          </div>
           <div class="col-9 main-content">
             Main Content
             <br />
@@ -65,12 +71,11 @@
     <script>
       const sidebar = document.getElementById("sidebar");
       for (let i = 0; i < 100; i++) {
-        sidebar.innerHTML += `Item# ${i+1}` + "<br/>";
+        // sidebar.innerHTML += `Item# ${i + 1}` + "<br/>";
 
-        // sidebar.innerHTML += `<div class="${
-        //   i % 2 === 0 ? "bg-primary" : "bg-success"
-        // }">Item# ${i + 1}</div>`;
-        
+        sidebar.innerHTML += `<div class="${
+          i % 2 === 0 ? "bg-primary" : "bg-success"
+        }">Item# ${i + 1}</div>`;
       }
     </script>
   </body>
