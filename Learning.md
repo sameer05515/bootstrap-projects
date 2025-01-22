@@ -51,4 +51,4 @@
 
 
 - **See related practicals**:
-  - See [here](./Bootstrap-5-Tutorial-For-Beginners/lesson-000)
+  - See [here](./Bootstrap-5-Tutorial-For-Beginners/lesson-0002-responsive-layouts/)
