@@ -20,7 +20,8 @@
 - Why grid consists of rows and columns?
 - How many maximum columns can be consist in a row of a grid?
 - Why there can be only 12 columns in a row of a grid? Can we have more than or less than 12 columns in a row of a grid?
-- `Practically show an example` to **Divide the row into columns to achieve given layout design**
-- 
+- `Practically show an example` to **Divide the row into columns to achieve given layout design**?
+- What are different `screen resolutions` , supported by bootstrap grid system?
+- What are various screen resolutions like `xs`, `sm`, `lg`, `xl`??
 
 
