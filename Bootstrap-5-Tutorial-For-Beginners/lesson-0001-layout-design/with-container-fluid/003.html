@@ -18,6 +18,10 @@
         height: 80px;
         border: 1px solid red;
       }
+      .sidebar {
+        max-height: 500px;
+        overflow-y: auto;
+      }
       .content {
         min-height: 500px;
         border: 1px solid red;
@@ -43,7 +47,9 @@
 
       <div class="content">
         <div class="row">
-          <div class="col-2 sidebar">Left sidebar</div>
+          <div id="sidebar" class="col-2 sidebar">
+            <h1>Left Sidebar</h1>
+          </div>
           <div class="col-8 main-content">
             Main Content
             <br />
@@ -65,5 +71,11 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      for (let i = 0; i < 100; i++) {
+        sidebar.innerHTML += `Item# ${i+1}` + "<br/>";
+      }
+    </script>
   </body>
 </html>
