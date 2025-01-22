@@ -1,6 +1,6 @@
 - Read [here](./README.md) for related learning resources.
 
-# Bootstrap 5: Key terminology and questions
+# Bootstrap 5: Key terminology and questions - v1
 
 > These discussions, questions and Practicals are based on [**Bootstrap 5 Tutorial For Beginners**](https://www.youtube.com/playlist?list=PLp50dWW_m40WzAh2wY0a9iFYb0QlPzoxx) series
 
