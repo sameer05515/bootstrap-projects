@@ -31,6 +31,13 @@
 ## Bootstrap : Grid classes
 - What are `five classes` in `Bootstrap 5 grid system`?
 - Tell us more about `.col`, `.col-xs`, `.col-sm` , `.col-md`, `.col-lg`, `.col-xl`, and `.col-xxl`?
-- 
+
+
+## Practical: Bootstrap: Designing Layouts
+- Let's start designing the layouts using Bootstrap Containers and Grids
+  - Implementing Simple Container
+  - Implementing Container with Header and Footer with Column
+  - Implementing Container with Header, Footer and 2 Columns Layout
+  - Implementing Container with Header, Footer and 3 Columns Layout
 
 
