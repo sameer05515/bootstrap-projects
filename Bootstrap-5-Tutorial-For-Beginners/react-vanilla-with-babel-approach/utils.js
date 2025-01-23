@@ -36,7 +36,7 @@ const pages = [
 
   Page.fromData("lessons/import-app-from-different-folder-v1", "").addChildren(
     Page.fromData(
-      "import-app-from-different-folder-v1",
+      "import-app-from-different-folder-v1: One working example",
       "import-app-from-different-folder-v1/index.html"
     ),
     Page.fromData(
