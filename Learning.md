@@ -95,6 +95,15 @@
   - See [here](./Bootstrap-5-Tutorial-For-Beginners/html-approach/lessons/0007-cards/)
 
 
+## [Bootstrap List](https://www.youtube.com/watch?v=_ls9d8XRIM8&list=PLp50dWW_m40WzAh2wY0a9iFYb0QlPzoxx&index=11)
+- What are different utility classes available in Bootstrap 5 `List`?
+- Tell us more about below Bootstrap 5 `Card` classes:-
+  - `list-group`
+  - `list-group-item`
+  - `active`
+  - `disabled`
+
+
 ## [Bootstrap Text](https://www.youtube.com/watch?v=PuOc6Ut-Zyg&list=PLp50dWW_m40WzAh2wY0a9iFYb0QlPzoxx&index=42)
 - What are different utility classes available in Bootstrap 5 `Text`?
 - Tell us more about below Bootstrap 5 `Text` classes:-
