@@ -2,7 +2,11 @@ const App = () => {
   return React.createElement(
     "div",
     null,
-    React.createElement("h1", null, "Hello from React!"),
+    React.createElement(
+      "h1",
+      null,
+      "Hello from React (v.002) with help of ChatGPT!"
+    ),
     React.createElement(
       "p",
       null,
