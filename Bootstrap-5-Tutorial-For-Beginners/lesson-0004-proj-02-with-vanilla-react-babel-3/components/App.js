@@ -1,5 +1,5 @@
-import Header from './Header.js';
-import Footer from './Footer.js';
+import {Header} from './Header.js';
+import {Footer} from './Footer.js';
 
 const App = () => {
   return (
@@ -14,4 +14,4 @@ const App = () => {
 // Render the App component to the DOM
 // ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 
-export default App;
+export {App};
