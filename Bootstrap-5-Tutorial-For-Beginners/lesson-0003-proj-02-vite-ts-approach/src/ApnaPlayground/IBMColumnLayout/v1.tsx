@@ -1,4 +1,4 @@
-
+import "./styles.v1.css"
 const IBMColumnLayoutV1 = () => {
   return (
     <div>
