@@ -117,6 +117,15 @@
   - `table-responsive`
   - `table-responsive-md`, `table-responsive-sm`
 
+## [Bootstrap Button](https://www.youtube.com/watch?v=7KVVoEDQB2o&list=PLp50dWW_m40WzAh2wY0a9iFYb0QlPzoxx&index=13)
+- What are different utility classes available in Bootstrap 5 `Button`?
+- Tell us more about below Bootstrap 5 `Button` classes:-
+  - `btn`
+  - `btn-primary`, `btn-secondary`
+  - `btn-outline-primary` / `btn-outline-secondary`
+  - `btn-sm` / `btn-md`
+  - `disabled`
+
 
 ## [Bootstrap Text](https://www.youtube.com/watch?v=PuOc6Ut-Zyg&list=PLp50dWW_m40WzAh2wY0a9iFYb0QlPzoxx&index=42)
 - What are different utility classes available in Bootstrap 5 `Text`?
