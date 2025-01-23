@@ -1,10 +1,11 @@
 import "./styles.v1.scss";
 
 const listItenArr = () => {
-  const arr: string[] = [];
-  for (let i = 0; i < 100; i++) {
-    arr.push("A simple primary list group item: " + (i + 1));
-    arr.push("A simple secondary list group item " + (i + 1));
+  const arr: { id: string; name: string }[] = [];
+  for (let i = 0; i < 20; i++) {
+    // arr.push("A simple primary list group item: " + (i + 1));
+    // arr.push("A simple secondary list group item: " + (i + 1));
+    arr.push({ id: `id_${i * 2}`, name: "primary item: " + (i + 1) }, { id: `id_${i * 2 + 1}`, name: "secondary item: " + (i + 1) });
   }
   return arr;
 };
@@ -17,7 +18,15 @@ const IBMColumnLayoutV1 = () => {
             <a className="navbar-brand" href="#">
               Navbar
             </a>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
@@ -52,9 +61,9 @@ const IBMColumnLayoutV1 = () => {
           <div className="col-3 sidebar">
             <ul className="list-group">
               <li className="list-group-item">A simple default list group item</li>
-              {listItenArr().map((item, idx) => (
-                <li key={`idx_${idx + 1}`} className="list-group-item list-group-item-dark">
-                  {item}
+              {listItenArr().map(({ name, id }) => (
+                <li key={id} className="list-group-item list-group-item-dark">
+                  {name}
                 </li>
               ))}
             </ul>
