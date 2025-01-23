@@ -75,6 +75,13 @@ const pages = [
   ),
 
   Page.fromData("lessons/0005-proj-03", "").addChildren(Page.fromData("Apple's Footer Link", "lessons/0005-proj-03/index.html")),
+
+  Page.fromData("lessons/0006-Navbar Examples","").addChildren(
+    Page.fromData("index.html", "lessons/0006-navbars/index.html").addChildren(
+      Page.fromData("001.html","lessons/0006-navbars/examples/001.html"),
+      Page.fromData("002.html","lessons/0006-navbars/examples/002.html")
+    )
+  )
 ];
 
 // Logging the output
