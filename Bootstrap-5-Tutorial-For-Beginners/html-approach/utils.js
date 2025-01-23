@@ -94,7 +94,10 @@ const pages = [
     )
   ),
 
-  Page.fromData("lessons/0005-proj-03", "lessons/0005-proj-03/index.html"),
+  Page.fromData(
+    "lessons/0005-proj-03",
+    ""
+  ).addChildren(Page.fromData("index.html", "lessons/0005-proj-03/index.html")),
 ];
 
 // Logging the output
