@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-JSX with Babel</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.19.3/babel.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/javascript">
+    // Helper function to fetch and transpile a file
+    async function fetchAndTranspile(file) {
+      const response = await fetch(file);
+      const code = await response.text();
+      return Babel.transform(code, {
+        presets: ["react"],
+        plugins: ["transform-modules-umd"],
+      }).code;
+    }
+
+    // Load dependencies in sequence
+    (async () => {
+      // Transpile Component1
+      const component1Code = await fetchAndTranspile("Component1.js");
+      eval(component1Code); // Load it into the browser's context
+
+      // Transpile Component2
+      const component2Code = await fetchAndTranspile("Component2.js");
+      eval(component2Code); // Load it into the browser's context
+
+      // Transpile App
+      const appCode = await fetchAndTranspile("App.js");
+      eval(appCode); // Load it into the browser's context
+
+      // Render App to the DOM
+      ReactDOM.createRoot(document.getElementById("root")).render(
+        React.createElement(App)
+      );
+    })();
+  </script>
+</body>
+</html>

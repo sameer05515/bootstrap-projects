@@ -6,31 +6,57 @@
     <title>React with ES Modules</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone@7.19.3/babel.js"></script>
+    <!-- <script src="https://unpkg.com/@babel/standalone@7.19.3/babel.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <!-- Include Something.js for Babel to compile -->
-    <script
+    <!-- <script
       data-plugins="transform-modules-umd"
       type="text/babel"
       data-presets="react"
       data-type="module"
       src="./components/App.js"
-    ></script>
+    ></script> -->
   </head>
   <body>
-    <div id="root-box"></div>
+    <div id="root"></div>
 
-    <script
-      data-plugins="transform-modules-umd"
-      type="text/babel"
-      data-presets="react"
-      data-type="module"
-    >
-      import {App} from "./components/App.js";
 
-      ReactDOM.createRoot(document.getElementById("root-box")).render(
-        <Something />
-      );
+
+
+    <script type="text/javascript">
+      // Helper function to fetch and transpile a file
+      async function fetchAndTranspile(file) {
+        const response = await fetch(file);
+        const code = await response.text();
+        return Babel.transform(code, {
+          presets: ["react"],
+          plugins: ["transform-modules-umd"],
+        }).code;
+      }
+  
+      // Load dependencies in sequence
+      (async () => {
+        // Transpile Component1
+        const component1Code = await fetchAndTranspile("Header.js");
+        eval(component1Code); // Load it into the browser's context
+  
+        // Transpile Component2
+        const component2Code = await fetchAndTranspile("Footer.js");
+        eval(component2Code); // Load it into the browser's context
+  
+        // Transpile App
+        const appCode = await fetchAndTranspile("App.js");
+        eval(appCode); // Load it into the browser's context
+  
+        // Render App to the DOM
+        ReactDOM.createRoot(document.getElementById("root")).render(
+          React.createElement(App)
+        );
+      })();
     </script>
+
+    
+      
   </body>
 </html>
