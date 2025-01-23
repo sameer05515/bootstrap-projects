@@ -1,7 +1,7 @@
 class Page {
   constructor(name, link, children = []) {
-    this.name = name;
-    this.link = link;
+    this.name = name || "Name Missing!!";
+    this.link = link || "";
     this.children = Array.isArray(children) ? children : [];
   }
 
@@ -38,7 +38,10 @@ const pages = [
     "0001-layout-design",
     "lessons/0001-layout-design/index.html"
   ).addChildren(
-    Page.fromData("./with-container/001.html", "lessons/0001-layout-design/with-container/001.html"),
+    Page.fromData(
+      "./with-container/001.html",
+      "lessons/0001-layout-design/with-container/001.html"
+    ),
     Page.fromData(
       "./with-container-fluid/001.html",
       "lessons/0001-layout-design/with-container-fluid/001.html"
@@ -61,26 +64,48 @@ const pages = [
 // Logging the output
 // console.log("Page.fromData: ",JSON.stringify(pages, null, 2));
 
-const getLinks = (pages = []) => {
-  return pages
-    .map(
-      ({ name, link, children }) => `
-        <li class="list-group-item text-wrap">           
-            <a href="${link}">${name}</a> 
-            ${
-              children && children.length > 0
-                ? `
-                <ul class="list-group ml-2">
-                ${getLinks(children)}
-                </ul>
-                `
-                : ""
-            }       
-        </li>
-        `
-    )
-    .join(" ");
+// const getLinks = (pages = []) => {
+//   return pages
+//     .map(
+//       ({ name, link, children }) => `
+//         <li class="list-group-item text-wrap">
+//             <a href="${link}">${name}</a>
+//             ${
+//               children && children.length > 0
+//                 ? `
+//                 <ul class="list-group ml-2">
+//                 ${getLinks(children)}
+//                 </ul>
+//                 `
+//                 : ""
+//             }
+//         </li>
+//         `
+//     )
+//     .join(" ");
+// };
+
+// Function to generate a single list item
+const createListItem = ({ name, link, children }) => {
+  const aa = `
+  <li class="list-group-item text-wrap">           
+    <a href="${link}">${name}</a> 
+    ${children?.length ? createNestedList(children) : ""}
+  </li>
+`;
+
+  return aa;
 };
+
+// Function to generate a nested list
+const createNestedList = (children) => `
+  <ul class="list-group ml-2">
+    ${getLinks(children)}
+  </ul>
+`;
+
+// Main function to generate links
+const getLinks = (pages = []) => pages.map(createListItem).join("");
 
 const ulElement = document.getElementById("nav-links-on-home-page");
 
