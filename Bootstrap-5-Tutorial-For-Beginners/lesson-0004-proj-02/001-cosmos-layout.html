@@ -87,13 +87,15 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-2 sidebar">Sidebar</div>
-
-        <div class="col-sm-10 main-content">
-          <h2>Main Content</h2>
-          <ul id="main-content-ul" class="list-group">
+        <div class="col-sm-3 sidebar rounded-2">
+          <h2>Sidebar</h2>
+          <ul id="sidebar-ul" class="list-group">
             <li class="list-group-item">My First Item</li>
           </ul>
+        </div>
+
+        <div class="col-sm-9 main-content">
+          <h2>Main Content</h2>
         </div>
       </div>
     </div>
@@ -104,7 +106,7 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      const mainContent = document.getElementById("main-content-ul");
+      const mainContent = document.getElementById("sidebar-ul");
       mainContent.innerHTML += Array.from(
         { length: 100 },
         (_, i) => `<li class="list-group-item">An item: ${i + 1}</li>`
