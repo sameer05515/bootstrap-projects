@@ -1,6 +1,9 @@
+import IBMColumnLayoutV1 from "./IBMColumnLayout/v1";
+
 const Components: Record<string, () => React.JSX.Element> = {
   Comp1: () => <div>Component 1</div>,
   Comp2: () => <div>Component 2</div>,
+  IBMColumnLayoutV1
 };
 
 export const componentNames = Object.keys(Components);
