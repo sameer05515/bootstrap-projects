@@ -2,7 +2,7 @@
 
 const Components:Record<string, ()=>React.JSX.Element> ={
     Comp1:()=> <div>Component 1</div>,
-    Comp2:()=> <div>Component 1</div>,
+    Comp2:()=> <div>Component 2</div>,
 };
 
 
