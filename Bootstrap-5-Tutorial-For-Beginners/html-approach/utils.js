@@ -1,8 +1,8 @@
 class Page {
-  constructor(name, link) {
+  constructor(name, link, children) {
     this.name = name;
     this.link = link;
-    this.children = [];
+    this.children = children || [];
   }
 
   addChildren(...children) {
