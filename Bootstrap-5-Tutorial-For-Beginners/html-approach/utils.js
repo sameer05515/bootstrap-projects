@@ -87,9 +87,10 @@ const pages = [
 
 // Function to generate a single list item
 const createListItem = ({ name, link, children }) => {
+  const linkStr = link ? `<a href="${link}">${name}</a> ` : name;
   const aa = `
   <li class="list-group-item text-wrap">           
-    <a href="${link}">${name}</a> 
+    ${linkStr}
     ${children?.length ? createNestedList(children) : ""}
   </li>
 `;
