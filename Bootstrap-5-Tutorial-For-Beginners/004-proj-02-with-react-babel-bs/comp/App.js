@@ -82,6 +82,24 @@ const NavBar = () => (
   </div>
 );
 
+const Card=({id})=>{
+
+  return (
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 m-2">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Card title: {id}</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+  )
+}
+
 const Dashboard=()=>(
   <div class="container-fluid">
       <div class="row">
@@ -89,6 +107,9 @@ const Dashboard=()=>(
           <h2>Sidebar</h2>
           <ul id="sidebar-ul" class="list-group">
             <li class="list-group-item text-wrap small">My First Item</li>
+            {["Home", "Dashboard", "Events", "Users", "Settings"].map((value,idx)=>(
+              <li key={`idx_${idx+1}`} class="list-group-item text-wrap small">{value}</li>
+            ))}
           </ul>
         </div>
 
@@ -106,6 +127,12 @@ const Dashboard=()=>(
                 </div>
               </div>
             </div>
+            {
+              Array.from({length:20},(_,idx)=>(
+                <Card id={idx+1} />
+              ))
+            }
+
           </div>
         </div>
       </div>
@@ -120,5 +147,30 @@ const App = () => {
     </div>
   );
 };
+
+// const mainContent = document.getElementById("sidebar-ul");
+// mainContent.innerHTML += ["Home", "Dashboard", "Events", "Users", "Settings"]
+//   .map(
+//     (value) => `
+//         <li class="list-group-item text-wrap small">${value}</li>
+//         `
+//   )
+//   .join(" ");
+
+// const myCardsRow = document.getElementById("my-cards");
+// myCardsRow.innerHTML += Array.from(
+//   { length: 15 },
+//   (_, i) => `
+//         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 m-2">
+//           <div class="card">  
+//             <div class="card-body">
+//               <h5 class="card-title">Card title: ${i + 1}</h5>
+//               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+//               <a href="#" class="btn btn-primary">Go somewhere</a>
+//             </div>
+//           </div>   
+//         </div>     
+//         `
+// ).join(" ");
 
 export default App;
