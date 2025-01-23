@@ -1,4 +1,10 @@
-import {SomethingElse} from "./SomethingElse";
+// import {SomethingElse} from "./SomethingElse";
+
+const SomethingElse = () => {
+  return (
+    <div>SomethingElse</div>
+  )
+}
 
 export const Something = () => {
   return (
