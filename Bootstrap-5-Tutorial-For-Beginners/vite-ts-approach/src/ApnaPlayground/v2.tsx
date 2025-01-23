@@ -5,7 +5,7 @@ import { useMemo } from "react";
 // } from "react-icons/ai";
 import { NavLink, useSearchParams } from "react-router-dom";
 
-import { componentNames, getComponentDetails } from "./utils";
+import { componentNames, getComponentDetails, PlaygroundBaseV2Route } from "./utils";
 
 const PlaygroundHeader = ({ param, next, prev }: { param: string; next: string; prev: string }) => {
   return (
@@ -28,7 +28,7 @@ const PlaygroundHeader = ({ param, next, prev }: { param: string; next: string; 
           width: "100%",
         }}
       >
-        <NavLink style={{ flex: 1, textAlign: "center" }} to={param ? "/apna-playground" : "/"}>
+        <NavLink style={{ flex: 1, textAlign: "center" }} to={param ? PlaygroundBaseV2Route : "/"}>
           {param ? "TESTING PAGE HOME" : "ROOT"}
         </NavLink>
       </div>
@@ -46,7 +46,7 @@ const PlaygroundHeader = ({ param, next, prev }: { param: string; next: string; 
         {/* Previous Link */}
         {prev && (
           <NavLink
-            to={`/apna-playground?tester=${prev}`}
+            to={`${PlaygroundBaseV2Route}?tester=${prev}`}
             style={{
               flex: 1,
               textAlign: "left",
@@ -75,7 +75,7 @@ const PlaygroundHeader = ({ param, next, prev }: { param: string; next: string; 
         {/* Next Link */}
         {next && (
           <NavLink
-            to={`/apna-playground?tester=${next}`}
+            to={`${PlaygroundBaseV2Route}?tester=${next}`}
             style={{
               flex: 1,
               textAlign: "right",
@@ -110,7 +110,7 @@ const PlaygroundHeader = ({ param, next, prev }: { param: string; next: string; 
           {componentNames.map((name) => (
             <NavLink
               key={name}
-              to={`/apna-playground?tester=${name}`}
+              to={`${PlaygroundBaseV2Route}?tester=${name}`}
               // className="text-blue-600 dark:text-cyan-300 hover:underline font-medium text-sm"
               style={{ textAlign: "center" }}
             >
@@ -156,6 +156,7 @@ const ToggleablDescription = () => (
     <h1>Purpose: </h1>
     <ul>
       <li>To test any compoent (especially custom component, built within TweetApp ) independently</li>
+      <li>This v2 version only different from v1 in styling. This v2 version is packed with bootstrap 5</li>
     </ul>
   </div>
 );

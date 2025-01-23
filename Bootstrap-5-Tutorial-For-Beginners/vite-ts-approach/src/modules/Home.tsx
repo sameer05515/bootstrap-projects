@@ -2,7 +2,8 @@ import { NavLink } from "react-router-dom";
 
 const routesArray = [
   { title: "Home", routeUrl: "/" },
-  { title: "Apna Playgound", routeUrl: "/apna-playground" },
+  { title: "Apna Playgound-V1", routeUrl: "/apna-playground/v1" },
+  { title: "Apna Playgound-V2", routeUrl: "/apna-playground/v2" },
 ].map((r, idx) => ({
   ...r,
   id: `route-${idx + 1}`,

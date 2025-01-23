@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import ApnaPlaygroundBaseV1 from "../ApnaPlayground/v1";
 import ApnaPlaygroundBaseV2 from "../ApnaPlayground/v2";
 import Home from "../modules/Home";
@@ -7,7 +7,7 @@ const AppRoutes = () => {
     // <div>le le mera lauda</div>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/apna-playground" element={<ApnaPlaygroundBaseV1 />} />
+      <Route path="/apna-playground/v1" element={<ApnaPlaygroundBaseV1 />} />
       <Route path="/apna-playground/v2" element={<ApnaPlaygroundBaseV2 />} />
 
       {/** ----- NOT FOUND ---------------------- */}
@@ -22,6 +22,7 @@ const NotFound = () => {
     <div>
       <h1>404 Not Found</h1>
       <p>Oops! Page not found.</p>
+      <NavLink className={"btn btn-primary"} to={"/"}>Go to Home</NavLink>
     </div>
   );
 };

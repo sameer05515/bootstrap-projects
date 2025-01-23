@@ -28,3 +28,6 @@ export const getComponentDetails = (componentName = "") => {
     ...calculateNextPrev(selectedIndex),
   };
 };
+
+export const PlaygroundBaseV1Route = "/apna-playground";
+export const PlaygroundBaseV2Route = "/apna-playground/v2";
