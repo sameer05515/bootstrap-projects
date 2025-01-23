@@ -4,11 +4,9 @@ const pages = [
 
 const ulElement = document.getElementById("nav-links-on-home-page");
 
-ulElement.innerHTML +=
-  // ["Home", "Dashboard", "Events", "Users", "Settings"]
-  pages
-    .map(
-      ({ name, link }) => `
+ulElement.innerHTML += pages
+  .map(
+    ({ name, link }) => `
         <li class="list-group-item text-wrap small">
         <li class="list-group-item">
             
@@ -16,5 +14,5 @@ ulElement.innerHTML +=
         </li>
         </li>
         `
-    )
-    .join(" ");
+  )
+  .join(" ");
