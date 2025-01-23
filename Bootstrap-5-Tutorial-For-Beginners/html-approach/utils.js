@@ -38,22 +38,22 @@ const pages = [
     "0001-layout-design",
     "lessons/0001-layout-design/index.html"
   ).addChildren(
-    Page.fromData("./with-container/001.html", "./with-container/001.html"),
+    Page.fromData("./with-container/001.html", "lessons/0001-layout-design/with-container/001.html"),
     Page.fromData(
       "./with-container-fluid/001.html",
-      "./with-container-fluid/001.html"
+      "lessons/0001-layout-design/with-container-fluid/001.html"
     ),
     Page.fromData(
       "./with-container-fluid/002.html",
-      "./with-container-fluid/002.html"
+      "lessons/0001-layout-design/with-container-fluid/002.html"
     ),
     Page.fromData(
       "./with-container-fluid/003.html",
-      "./with-container-fluid/003.html"
+      "lessons/0001-layout-design/with-container-fluid/003.html"
     ),
     Page.fromData(
       "./with-container-fluid/004.html",
-      "./with-container-fluid/004.html"
+      "lessons/0001-layout-design/with-container-fluid/004.html"
     )
   ),
 ];
