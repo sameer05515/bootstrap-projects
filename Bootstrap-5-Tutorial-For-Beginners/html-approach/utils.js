@@ -32,9 +32,16 @@ class Page {
 const pages = [
   Page.fromData("login-registration-forms-testing", "").addChildren(
     Page.fromData("index.html", "lessons/login-regn-forms-testing/index.html"),
-    Page.fromData("experiment-pages/Check-Row-Column.html", "lessons/login-regn-forms-testing/experiment-pages/Check-Row-Column.html"),
-    Page.fromData("forms/login-form.html", "lessons/login-regn-forms-testing/forms/login-form.html"),
-    Page.fromData("forms/registration-form.html", "lessons/login-regn-forms-testing/forms/registration-form.html")
+    Page.fromData("experiment-pages", "").addChildren(
+      Page.fromData("Check-Row-Column.html", "lessons/login-regn-forms-testing/experiment-pages/Check-Row-Column.html"),
+    ),
+
+    Page.fromData("forms", "").addChildren(
+      Page.fromData("login-form.html", "lessons/login-regn-forms-testing/forms/login-form.html"),
+      Page.fromData("registration-form.html", "lessons/login-regn-forms-testing/forms/registration-form.html")
+    ),
+    
+    
   ),
 
   Page.fromData("lessons/0001-layout-design", "").addChildren(
