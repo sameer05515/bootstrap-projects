@@ -1,19 +1,20 @@
-
-
-const Components:Record<string, ()=>React.JSX.Element> ={
-    Comp1:()=> <div>Component 1</div>,
-    Comp2:()=> <div>Component 2</div>,
+const Components: Record<string, () => React.JSX.Element> = {
+  Comp1: () => <div>Component 1</div>,
+  Comp2: () => <div>Component 2</div>,
 };
-
 
 export const componentNames = Object.keys(Components);
 const componentCount = componentNames.length;
 
-export const calculateNextPrev = (selectedIndex:number) =>
+export const calculateNextPrev = (selectedIndex: number) =>
   selectedIndex >= 0
     ? {
-        next: componentNames[(selectedIndex + 1 + componentCount) % componentCount],
-        prev: componentNames[(selectedIndex - 1 + componentCount) % componentCount],
+        next: componentNames[
+          (selectedIndex + 1 + componentCount) % componentCount
+        ],
+        prev: componentNames[
+          (selectedIndex - 1 + componentCount) % componentCount
+        ],
       }
     : { next: "", prev: "" };
 
