@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React with ES Modules</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.19.3/babel.js"></script>
+
+    <!-- Include Something.js for Babel to compile -->
+    <script
+      data-plugins="transform-modules-umd"
+      type="text/babel"
+      data-presets="react"
+      data-type="module"
+      src="./components/App.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root-box"></div>
+
+    <script
+      data-plugins="transform-modules-umd"
+      type="text/babel"
+      data-presets="react"
+      data-type="module"
+    >
+      import { Something } from "./components/App.js";
+
+      ReactDOM.createRoot(document.getElementById("root-box")).render(
+        <Something />
+      );
+    </script>
+  </body>
+</html>
