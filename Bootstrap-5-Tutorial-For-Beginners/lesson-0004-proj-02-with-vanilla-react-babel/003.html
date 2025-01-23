@@ -26,11 +26,16 @@
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
       crossorigin
     ></script>
-    <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- <script type="text/babel">
         
       </script> -->
-      <!-- <script type="module" src="./004-script.js"></script> -->
-      <script type="module" src="./jsx-syntax/App.js"></script>
+    <!-- <script type="module" src="./004-script.js"></script> -->
+    <!-- <script type="text/babel" src="./jsx-syntax/App.js"></script> -->
+    <script type="text/babel">
+      import App from "./jsx-syntax/App.js";
+
+      ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+    </script>
   </body>
 </html>
