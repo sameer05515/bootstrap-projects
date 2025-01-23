@@ -1,46 +1,46 @@
-import { useMemo } from "react";
+import { useMemo } from 'react';
 // import {
 //   AiFillForward as NextIcon,
 //   AiFillBackward as PrevIcon,
 // } from "react-icons/ai";
-import { NavLink, useSearchParams } from "react-router-dom";
+import { NavLink, useSearchParams } from 'react-router-dom';
 
-import { componentNames, getComponentDetails } from "./utils";
+import { componentNames, getComponentDetails } from './utils';
 
 const PlaygroundHeader = ({ param, next, prev }: { param: string; next: string; prev: string }) => {
   return (
     <div
       style={{
-        width: "95vw",
-        display: "block",
-        alignItems: "center",
+        width: '95vw',
+        display: 'block',
+        alignItems: 'center',
         // justifyContent:"center"
       }}
     >
       {/* Top Title Section */}
       <div
         style={{
-          display: "flex",
-          justifyItems: "center",
-          fontWeight: "bold",
-          paddingTop: "4px",
-          paddingBottom: "4px",
-          width: "100%",
+          display: 'flex',
+          justifyItems: 'center',
+          fontWeight: 'bold',
+          paddingTop: '4px',
+          paddingBottom: '4px',
+          width: '100%',
         }}
       >
-        <NavLink style={{ flex: 1, textAlign: "center" }} to={param ? "/apna-playground" : "/"}>
-          {param ? "TESTING PAGE HOME" : "ROOT"}
+        <NavLink style={{ flex: 1, textAlign: 'center' }} to={param ? '/apna-playground' : '/'}>
+          {param ? 'TESTING PAGE HOME' : 'ROOT'}
         </NavLink>
       </div>
 
       {/* Navigation Header Section */}
       <header
         style={{
-          display: "flex",
-          color: "chocolate",
-          backgroundColor: "lightblue",
-          justifyItems: "center",
-          width: "100%",
+          display: 'flex',
+          color: 'chocolate',
+          backgroundColor: 'lightblue',
+          justifyItems: 'center',
+          width: '100%',
         }}
       >
         {/* Previous Link */}
@@ -49,10 +49,10 @@ const PlaygroundHeader = ({ param, next, prev }: { param: string; next: string; 
             to={`/apna-playground?tester=${prev}`}
             style={{
               flex: 1,
-              textAlign: "left",
+              textAlign: 'left',
               fontSize: 10,
-              display: "flex",
-              justifyContent: "flex-start",
+              display: 'flex',
+              justifyContent: 'flex-start',
             }}
           >
             {/* <PrevIcon style={{ marginRight: "4px" }} /> */}
@@ -64,12 +64,12 @@ const PlaygroundHeader = ({ param, next, prev }: { param: string; next: string; 
         <span
           style={{
             flex: 3,
-            textAlign: "center",
+            textAlign: 'center',
             fontSize: 13,
-            fontWeight: "bold",
+            fontWeight: 'bold',
           }}
         >
-          Current Tester: '{param || "None"}'
+          Current Tester: '{param || 'None'}'
         </span>
 
         {/* Next Link */}
@@ -78,11 +78,11 @@ const PlaygroundHeader = ({ param, next, prev }: { param: string; next: string; 
             to={`/apna-playground?tester=${next}`}
             style={{
               flex: 1,
-              textAlign: "right",
+              textAlign: 'right',
               fontSize: 10,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-end",
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'flex-end',
             }}
           >
             <span>{next}</span>
@@ -98,12 +98,12 @@ const PlaygroundHeader = ({ param, next, prev }: { param: string; next: string; 
       {!param && (
         <div
           style={{
-            display: "block",
-            justifyItems: "center",
-            fontWeight: "bold",
-            paddingTop: "4px",
-            paddingBottom: "4px",
-            width: "100%",
+            display: 'block',
+            justifyItems: 'center',
+            fontWeight: 'bold',
+            paddingTop: '4px',
+            paddingBottom: '4px',
+            width: '100%',
           }}
           // className="py-2 flex flex-col justify-center gap-4"
         >
@@ -112,7 +112,7 @@ const PlaygroundHeader = ({ param, next, prev }: { param: string; next: string; 
               key={name}
               to={`/apna-playground?tester=${name}`}
               // className="text-blue-600 dark:text-cyan-300 hover:underline font-medium text-sm"
-              style={{ textAlign: "center" }}
+              style={{ textAlign: 'center' }}
             >
               <div>{name}</div>
             </NavLink>
@@ -125,7 +125,7 @@ const PlaygroundHeader = ({ param, next, prev }: { param: string; next: string; 
 
 const ApnaPlaygroundBaseV1 = () => {
   const [searchParams] = useSearchParams();
-  const param = searchParams.get("tester") || "";
+  const param = searchParams.get('tester') || '';
 
   const { Component, next, prev } = useMemo(() => {
     return getComponentDetails(param);
@@ -135,7 +135,7 @@ const ApnaPlaygroundBaseV1 = () => {
       style={{
         // backgroundColor: isDarkMode ? "black" : "white",
         // color: isDarkMode ? "white" : "black",
-        paddingLeft: "25px",
+        paddingLeft: '25px',
         // paddingTop: "5px",
       }}
     >
