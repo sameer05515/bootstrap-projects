@@ -82,10 +82,41 @@ const NavBar = () => (
   </div>
 );
 
+const Dashboard=()=>(
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2 sidebar rounded-2">
+          <h2>Sidebar</h2>
+          <ul id="sidebar-ul" class="list-group">
+            <li class="list-group-item text-wrap small">My First Item</li>
+          </ul>
+        </div>
+
+        <div class="col-sm-10 main-content">          
+          <div id="my-cards" class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 m-2">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Card title: 0</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+)
+
 const App = () => {
   return (
     <div>
       <NavBar />
+      <Dashboard/>
     </div>
   );
 };
