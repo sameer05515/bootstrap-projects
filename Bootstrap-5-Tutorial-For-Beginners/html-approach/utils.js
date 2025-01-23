@@ -70,6 +70,21 @@ const pages = [
       "lessons/0004-proj-02/cosmos-layout-v2.html"
     )
   ),
+
+  Page.fromData("0002-responsive-layouts", "").addChildren(
+    Page.fromData(
+      "with-container/001.html",
+      "lessons/0002-responsive-layouts/with-container/001.html"
+    ),
+    Page.fromData(
+      "with-container-fluid/001.html",
+      "lessons/0002-responsive-layouts/with-container-fluid/001.html"
+    ),
+    Page.fromData(
+      "with-container-fluid/002.html",
+      "lessons/0002-responsive-layouts/with-container-fluid/002.html"
+    )
+  ),
 ];
 
 // Logging the output
