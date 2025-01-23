@@ -1,38 +1,54 @@
 class Page {
-  constructor(name, link, children) {
+  constructor(name, link, children = []) {
     this.name = name;
     this.link = link;
-    this.children = children || [];
+    this.children = Array.isArray(children) ? children : [];
   }
 
-  addChildren(...children) {
-    this.children = children;
+  // Add one or more children to this Page
+  addChildren(...newChildren) {
+    this.children.push(...newChildren);
+    return this; // Return 'this' to allow method chaining
   }
 
-  // Static method to create a Lesson from an object
-  static fromData(name, link, children) {
-    return new Lesson(name, link, children);
+  // Static method to create a Page instance from raw data
+  static fromData(name, link, children = []) {
+    const childPages = children.map((child) =>
+      Page.fromData(child.name, child.link, child.children)
+    );
+    return new Page(name, link, childPages);
   }
 }
 
+// Example usage:
+// const pages = [
+//   new Page("0005-proj-03", "lessons/0005-proj-03/index.html"),
+//   new Page(
+//     "0001-layout-design",
+//     "lessons/0001-layout-design/index.html"
+//   ).addChildren(
+//     new Page("./with-container/001.html", "./with-container/001.html")
+//   ),
+// ];
+
 const pages = [
-  //   { name: "0005-proj-03", link: "lessons/0005-proj-03/index.html" },
-  new Page("0005-proj-03", "lessons/0005-proj-03/index.html"),
-  new Page(
+  Page.fromData("0005-proj-03", "lessons/0005-proj-03/index.html"),
+  Page.fromData(
     "0001-layout-design",
     "lessons/0001-layout-design/index.html"
   ).addChildren(
-    new Page("./with-container/001.html", "./with-container/001.html")
+    Page.fromData("./with-container/001.html", "./with-container/001.html")
   ),
 ];
 
-console.log(pages)
+// Logging the output
+console.log("Page.fromData: ",JSON.stringify(pages, null, 2));
 
 const getLinks = (pages = []) => {
   return pages
     .map(
       ({ name, link, children }) => `
-        <li class="list-group-item text-wrap small">           
+        <li class="list-group-item text-wrap">           
             <a href="${link}">${name}</a> 
             ${
               children && children.length > 0
