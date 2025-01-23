@@ -42,7 +42,7 @@ const pages = [
 ];
 
 // Logging the output
-console.log("Page.fromData: ",JSON.stringify(pages, null, 2));
+// console.log("Page.fromData: ",JSON.stringify(pages, null, 2));
 
 const getLinks = (pages = []) => {
   return pages
