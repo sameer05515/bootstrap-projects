@@ -1,4 +1,4 @@
-import "./styles.v1.css"
+import "./styles.v1.scss"
 const IBMColumnLayoutV1 = () => {
   return (
     <div>
@@ -226,7 +226,7 @@ const IBMColumnLayoutV1 = () => {
 
           <div className="col-9 p-4 main-content">
             <h2>Inspections</h2>
-            <table className="table">
+            <table className="table myTable420">
               <thead>
                 <tr>
                   <th scope="col">#</th>
