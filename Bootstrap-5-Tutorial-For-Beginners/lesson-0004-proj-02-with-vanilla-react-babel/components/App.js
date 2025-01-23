@@ -6,7 +6,7 @@ const App = () => {
     'div',
     null,
     React.createElement(Header),
-    React.createElement('p', null, 'Welcome to React with Vanilla JavaScript, using standalone babel!'),
+    React.createElement('p', null, 'Welcome to React with Vanilla JavaScript, using standalone babel and "React.createElement" syntax  !'),
     React.createElement(Footer)
   );
 };
