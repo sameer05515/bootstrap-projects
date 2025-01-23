@@ -97,7 +97,7 @@ const pages = [
   Page.fromData(
     "lessons/0005-proj-03",
     ""
-  ).addChildren(Page.fromData("index.html", "lessons/0005-proj-03/index.html")),
+  ).addChildren(Page.fromData("Apple's Footer Link", "lessons/0005-proj-03/index.html")),
 ];
 
 // Logging the output
