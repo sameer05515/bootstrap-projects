@@ -9,12 +9,8 @@ const componentCount = componentNames.length;
 export const calculateNextPrev = (selectedIndex: number) =>
   selectedIndex >= 0
     ? {
-        next: componentNames[
-          (selectedIndex + 1 + componentCount) % componentCount
-        ],
-        prev: componentNames[
-          (selectedIndex - 1 + componentCount) % componentCount
-        ],
+        next: componentNames[(selectedIndex + 1 + componentCount) % componentCount],
+        prev: componentNames[(selectedIndex - 1 + componentCount) % componentCount],
       }
     : { next: "", prev: "" };
 

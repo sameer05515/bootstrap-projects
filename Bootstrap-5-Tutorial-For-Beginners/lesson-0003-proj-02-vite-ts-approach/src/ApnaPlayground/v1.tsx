@@ -7,15 +7,7 @@ import { NavLink, useSearchParams } from "react-router-dom";
 
 import { componentNames, getComponentDetails } from "./utils";
 
-const PlaygroundHeader = ({
-  param,
-  next,
-  prev,
-}: {
-  param: string;
-  next: string;
-  prev: string;
-}) => {
+const PlaygroundHeader = ({ param, next, prev }: { param: string; next: string; prev: string }) => {
   return (
     <div
       style={{
@@ -36,10 +28,7 @@ const PlaygroundHeader = ({
           width: "100%",
         }}
       >
-        <NavLink
-          style={{ flex: 1, textAlign: "center" }}
-          to={param ? "/apna-playground" : "/"}
-        >
+        <NavLink style={{ flex: 1, textAlign: "center" }} to={param ? "/apna-playground" : "/"}>
           {param ? "TESTING PAGE HOME" : "ROOT"}
         </NavLink>
       </div>
@@ -166,10 +155,7 @@ const ToggleablDescription = () => (
   <div>
     <h1>Purpose: </h1>
     <ul>
-      <li>
-        To test any compoent (especially custom component, built within TweetApp
-        ) independently
-      </li>
+      <li>To test any compoent (especially custom component, built within TweetApp ) independently</li>
     </ul>
   </div>
 );
