@@ -1,0 +1,9 @@
+body {
+    background-color: aqua;
+  }
+  .sidebar {
+    background-color: hotpink;
+    min-height: 600px;
+    border-right: 5px solid #ddd;
+    border-left: 5px solid #ddd;
+  }
