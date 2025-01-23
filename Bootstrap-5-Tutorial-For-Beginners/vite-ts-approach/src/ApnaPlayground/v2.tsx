@@ -9,83 +9,33 @@ import { componentNames, getComponentDetails, PlaygroundBaseV2Route } from "./ut
 
 const PlaygroundHeader = ({ param, next, prev }: { param: string; next: string; prev: string }) => {
   return (
-    <div
-      style={{
-        width: "95vw",
-        display: "block",
-        alignItems: "center",
-        // justifyContent:"center"
-      }}
-    >
+    <div className="col">
       {/* Top Title Section */}
-      <div
-        style={{
-          display: "flex",
-          justifyItems: "center",
-          fontWeight: "bold",
-          paddingTop: "4px",
-          paddingBottom: "4px",
-          width: "100%",
-        }}
-      >
-        <NavLink style={{ flex: 1, textAlign: "center" }} to={param ? PlaygroundBaseV2Route : "/"}>
-          {param ? "TESTING PAGE HOME" : "ROOT"}
-        </NavLink>
+      <div className="row text-center text-uppercase fw-bold">
+        <NavLink className="text-decoration-none" to={param ? PlaygroundBaseV2Route : "/"}>{param ? "TESTING PAGE HOME" : "ROOT"}</NavLink>
       </div>
 
       {/* Navigation Header Section */}
-      <header
-        style={{
-          display: "flex",
-          color: "chocolate",
-          backgroundColor: "lightblue",
-          justifyItems: "center",
-          width: "100%",
-        }}
-      >
+      <header className="row align-content-center">
         {/* Previous Link */}
         {prev && (
-          <NavLink
-            to={`${PlaygroundBaseV2Route}?tester=${prev}`}
-            style={{
-              flex: 1,
-              textAlign: "left",
-              fontSize: 10,
-              display: "flex",
-              justifyContent: "flex-start",
-            }}
-          >
+          <NavLink to={`${PlaygroundBaseV2Route}?tester=${prev}`} className="col-2 text-start text-break text-decoration-none">
             {/* <PrevIcon style={{ marginRight: "4px" }} /> */}
-            <span>{prev}</span>
+            <span className="fs-6">
+              {"<<"} {prev}
+            </span>
           </NavLink>
         )}
 
         {/* Current Route Info */}
-        <span
-          style={{
-            flex: 3,
-            textAlign: "center",
-            fontSize: 13,
-            fontWeight: "bold",
-          }}
-        >
-          Current Tester: '{param || "None"}'
-        </span>
+        <span className={`${!prev?"col-12":"col-8"} text-center`}>Current Tester: '{param || "None"}'</span>
 
         {/* Next Link */}
         {next && (
-          <NavLink
-            to={`${PlaygroundBaseV2Route}?tester=${next}`}
-            style={{
-              flex: 1,
-              textAlign: "right",
-              fontSize: 10,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-end",
-            }}
-          >
-            <span>{next}</span>
+          <NavLink to={`${PlaygroundBaseV2Route}?tester=${next}`} className="col-2 text-end text-break text-decoration-none">
+            <span>
+              {next} {">>"}
+            </span>
             {/* <NextIcon style={{ marginLeft: "4px" }} /> */}
           </NavLink>
         )}
@@ -96,24 +46,9 @@ const PlaygroundHeader = ({ param, next, prev }: { param: string; next: string; 
 
       {/* Navigation Links for Component Names */}
       {!param && (
-        <div
-          style={{
-            display: "block",
-            justifyItems: "center",
-            fontWeight: "bold",
-            paddingTop: "4px",
-            paddingBottom: "4px",
-            width: "100%",
-          }}
-          // className="py-2 flex flex-col justify-center gap-4"
-        >
+        <div className="list-group fw-bolder">
           {componentNames.map((name) => (
-            <NavLink
-              key={name}
-              to={`${PlaygroundBaseV2Route}?tester=${name}`}
-              // className="text-blue-600 dark:text-cyan-300 hover:underline font-medium text-sm"
-              style={{ textAlign: "center" }}
-            >
+            <NavLink key={name} to={`${PlaygroundBaseV2Route}?tester=${name}`} className="list-group-item text-center">
               <div>{name}</div>
             </NavLink>
           ))}
@@ -153,8 +88,8 @@ const ApnaPlaygroundBaseV2 = () => {
 
 const ToggleablDescription = () => (
   <div>
-    <h1>Purpose: </h1>
-    <ul>
+    <div className="fs-4">Purpose: </div>
+    <ul className="list-unstyled">
       <li>To test any compoent (especially custom component, built within TweetApp ) independently</li>
       <li>This v2 version only different from v1 in styling. This v2 version is packed with bootstrap 5</li>
     </ul>

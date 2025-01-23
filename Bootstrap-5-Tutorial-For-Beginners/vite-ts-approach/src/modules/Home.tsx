@@ -11,7 +11,7 @@ const routesArray = [
 
 const Home = () => {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid p-2">
       <div
         style={{
           display: "block",

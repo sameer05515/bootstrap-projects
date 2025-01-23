@@ -5,7 +5,7 @@ import AppRoutes from "./routes/v1";
 
 function App() {
   return (
-    <div className="container-fluid bg-dark-subtle min-vh-100 overflow-auto">
+    <div className="container-fluid min-vh-100 overflow-auto">
       <AppRoutes />
     </div>
   );
