@@ -75,3 +75,6 @@
   - `navbar-expand-lg`
   - `navbar-toggler`
   - `fixed-top`, `fixed-bottom`, `sticky-top`
+
+- **See related practicals**:
+  - See [here](./Bootstrap-5-Tutorial-For-Beginners/html-approach/lessons/0006-navbars/)
