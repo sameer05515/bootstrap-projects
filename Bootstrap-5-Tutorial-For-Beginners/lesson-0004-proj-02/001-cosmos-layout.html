@@ -87,15 +87,28 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 sidebar rounded-2">
+        <div class="col-sm-2 sidebar rounded-2">
           <h2>Sidebar</h2>
           <ul id="sidebar-ul" class="list-group">
-            <li class="list-group-item">My First Item</li>
+            <li class="list-group-item text-wrap small">My First Item</li>
           </ul>
         </div>
 
-        <div class="col-sm-9 main-content">
-          <h2>Main Content</h2>
+        <div class="col-sm-10 main-content">          
+          <div id="my-cards" class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3 p-2">
+              <div class="card" style="width: 18rem">
+                <div class="card-body">
+                  <h5 class="card-title">Card title: 0</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -107,9 +120,34 @@
     ></script>
     <script>
       const mainContent = document.getElementById("sidebar-ul");
-      mainContent.innerHTML += Array.from(
-        { length: 100 },
-        (_, i) => `<li class="list-group-item">An item: ${i + 1}</li>`
+      mainContent.innerHTML += [
+        "Home",
+        "Dashboard",
+        "Events",
+        "Users",
+        "Settings",
+      ]
+        .map(
+          (value) => `
+        <li class="list-group-item text-wrap small">${value}</li>
+        `
+        )
+        .join(" ");
+
+      const myCardsRow = document.getElementById("my-cards");
+      myCardsRow.innerHTML += Array.from(
+        { length: 15 },
+        (_, i) => `
+        <div class="col-sm-6 col-md-4 col-lg-3 p-2">
+          <div class="card" style="width: 18rem;">  
+            <div class="card-body">
+              <h5 class="card-title">Card title: ${i + 1}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>   
+        </div>     
+        `
       ).join(" ");
     </script>
   </body>
