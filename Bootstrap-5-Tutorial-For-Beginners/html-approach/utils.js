@@ -6,15 +6,27 @@ class Page {
   }
 
   addChildren(...children) {
-    this.children = [...children];
+    this.children = children;
+  }
+
+  // Static method to create a Lesson from an object
+  static fromData(name, link, children) {
+    return new Lesson(name, link, children);
   }
 }
 
 const pages = [
   //   { name: "0005-proj-03", link: "lessons/0005-proj-03/index.html" },
   new Page("0005-proj-03", "lessons/0005-proj-03/index.html"),
-  new Page("0001-layout-design", "lessons/0001-layout-design/index.html"),
+  new Page(
+    "0001-layout-design",
+    "lessons/0001-layout-design/index.html"
+  ).addChildren(
+    new Page("./with-container/001.html", "./with-container/001.html")
+  ),
 ];
+
+console.log(pages)
 
 const getLinks = (pages = []) => {
   return pages
@@ -38,15 +50,5 @@ const getLinks = (pages = []) => {
 };
 
 const ulElement = document.getElementById("nav-links-on-home-page");
-
-// ulElement.innerHTML += pages
-//   .map(
-//     ({ name, link }) => `
-//         <li class="list-group-item text-wrap small">
-//             <a href="${link}">${name}</a>
-//         </li>
-//         `
-//   )
-//   .join(" ");
 
 ulElement.innerHTML += getLinks(pages);
