@@ -63,3 +63,15 @@
 - **See related practicals**:
   - See [here](./Bootstrap-5-Tutorial-For-Beginners/lesson-0003-live-poroject-01-grid-and-layout-design/)
   - In this project we are going to design `IBM's 2 column layout`
+
+## [Bootstrap Navbar](https://www.youtube.com/watch?v=nZZ06J1EUqM&list=PLp50dWW_m40WzAh2wY0a9iFYb0QlPzoxx&index=9)
+- What are different utility classes available in Bootstrap 5 `Navbar`?
+- Tell us more about below Bootstrap 5 `Navbar` classes:-
+  - `navbar` 
+  - `navbar-brand`
+  - `navbar-item`
+  - `navbar-link`
+  - `navbar-light`
+  - `navbar-expand-lg`
+  - `navbar-toggler`
+  - `fixed-top`, `fixed-bottom`, `sticky-top`
