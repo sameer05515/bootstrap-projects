@@ -32,10 +32,8 @@ class Page {
 // ];
 
 const pages = [
-  Page.fromData("0005-proj-03", "lessons/0005-proj-03/index.html"),
-
   Page.fromData(
-    "0001-layout-design",
+    "lessons/0001-layout-design",
     "lessons/0001-layout-design/index.html"
   ).addChildren(
     Page.fromData(
@@ -60,18 +58,7 @@ const pages = [
     )
   ),
 
-  Page.fromData("0004-proj-02", "").addChildren(
-    Page.fromData(
-      "cosmos-layout-v1.html",
-      "lessons/0004-proj-02/cosmos-layout-v1.html"
-    ),
-    Page.fromData(
-      "cosmos-layout-v2.html",
-      "lessons/0004-proj-02/cosmos-layout-v2.html"
-    )
-  ),
-
-  Page.fromData("0002-responsive-layouts", "").addChildren(
+  Page.fromData("lessons/0002-responsive-layouts", "").addChildren(
     Page.fromData(
       "with-container/001.html",
       "lessons/0002-responsive-layouts/with-container/001.html"
@@ -85,6 +72,29 @@ const pages = [
       "lessons/0002-responsive-layouts/with-container-fluid/002.html"
     )
   ),
+
+  Page.fromData(
+    "lessons/0003-live-poroject-01-grid-and-layout-design",
+    ""
+  ).addChildren(
+    Page.fromData(
+      "IBM-2-column-layout.v1.html",
+      "lessons/0003-live-poroject-01-grid-and-layout-design/IBM-2-column-layout.v1.html"
+    )
+  ),
+
+  Page.fromData("lessons/0004-proj-02", "").addChildren(
+    Page.fromData(
+      "cosmos-layout-v1.html",
+      "lessons/0004-proj-02/cosmos-layout-v1.html"
+    ),
+    Page.fromData(
+      "cosmos-layout-v2.html",
+      "lessons/0004-proj-02/cosmos-layout-v2.html"
+    )
+  ),
+
+  Page.fromData("lessons/0005-proj-03", "lessons/0005-proj-03/index.html"),
 ];
 
 // Logging the output
