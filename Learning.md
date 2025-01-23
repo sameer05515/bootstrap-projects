@@ -133,7 +133,7 @@
 
 
 ## [Bootstrap Typography](https://www.youtube.com/watch?v=WF1awwkxZM4&list=PLp50dWW_m40WzAh2wY0a9iFYb0QlPzoxx&index=29)
-- What is `Typography`?
+- What is `Typography` in bootstrap?
 - Why should we learn `Typography`?
 
 
