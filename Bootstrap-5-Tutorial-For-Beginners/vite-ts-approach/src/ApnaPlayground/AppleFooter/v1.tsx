@@ -1,3 +1,5 @@
+import "./styles.v1.scss";
+
 
 const AppleFooterV1 = () => {
   return (
