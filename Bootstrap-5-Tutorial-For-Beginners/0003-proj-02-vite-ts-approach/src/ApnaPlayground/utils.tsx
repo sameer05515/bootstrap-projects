@@ -1,9 +1,11 @@
 import IBMColumnLayoutV1 from "./IBMColumnLayout/v1";
+import CosmosLayoutV2 from "./CosmosLayout/v2";
 
 const Components: Record<string, () => React.JSX.Element> = {
   Comp1: () => <div>Component 1</div>,
   Comp2: () => <div>Component 2</div>,
   IBMColumnLayoutV1,
+  CosmosLayoutV2
 };
 
 export const componentNames = Object.keys(Components);
