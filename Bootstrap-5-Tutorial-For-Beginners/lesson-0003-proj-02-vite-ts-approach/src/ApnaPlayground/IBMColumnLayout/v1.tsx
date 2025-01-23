@@ -1,4 +1,4 @@
-import './styles.v1.scss';
+import "./styles.v1.scss";
 
 const listItenArr = () => {
   const arr: { id: string; name: string }[] = [];
@@ -6,8 +6,8 @@ const listItenArr = () => {
     // arr.push("A simple primary list group item: " + (i + 1));
     // arr.push("A simple secondary list group item: " + (i + 1));
     arr.push(
-      { id: `id_${i * 2}`, name: 'primary item: ' + (i + 1) },
-      { id: `id_${i * 2 + 1}`, name: 'secondary item: ' + (i + 1) }
+      { id: `id_${i * 2}`, name: "primary item: " + (i + 1) },
+      { id: `id_${i * 2 + 1}`, name: "secondary item: " + (i + 1) },
     );
   }
   return arr;

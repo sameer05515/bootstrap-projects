@@ -1,4 +1,4 @@
-import IBMColumnLayoutV1 from './IBMColumnLayout/v1';
+import IBMColumnLayoutV1 from "./IBMColumnLayout/v1";
 
 const Components: Record<string, () => React.JSX.Element> = {
   Comp1: () => <div>Component 1</div>,
@@ -15,9 +15,9 @@ export const calculateNextPrev = (selectedIndex: number) =>
         next: componentNames[(selectedIndex + 1 + componentCount) % componentCount],
         prev: componentNames[(selectedIndex - 1 + componentCount) % componentCount],
       }
-    : { next: '', prev: '' };
+    : { next: "", prev: "" };
 
-export const getComponentDetails = (componentName = '') => {
+export const getComponentDetails = (componentName = "") => {
   const selectedIndex = componentNames.indexOf(componentName);
   return {
     Component: Components[componentName] || null,

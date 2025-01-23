@@ -1,6 +1,6 @@
-import { Route, Routes } from 'react-router-dom';
-import ApnaPlaygroundBaseV1 from '../ApnaPlayground/v1';
-import Home from '../modules/Home';
+import { Route, Routes } from "react-router-dom";
+import ApnaPlaygroundBaseV1 from "../ApnaPlayground/v1";
+import Home from "../modules/Home";
 const AppRoutes = () => {
   return (
     // <div>le le mera lauda</div>
