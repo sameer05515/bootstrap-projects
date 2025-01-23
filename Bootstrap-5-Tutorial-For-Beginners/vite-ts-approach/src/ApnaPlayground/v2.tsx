@@ -89,10 +89,10 @@ const ApnaPlaygroundBaseV2 = () => {
 const ToggleablDescription = () => (
   <div>
     <div className="fs-4">Purpose: </div>
-    <ul className="list-unstyled">
-      <li>To test any compoent (especially custom component, built within TweetApp ) independently</li>
-      <li>This v2 version only different from v1 in styling. This v2 version is packed with bootstrap 5</li>
-    </ul>
+    <div>
+      <div className="p-2">To test any compoent (especially custom component, built within TweetApp ) independently</div>
+      <div className="p-2">This v2 version only different from v1 in styling. This v2 version is packed with bootstrap 5</div>
+    </div>
   </div>
 );
 
