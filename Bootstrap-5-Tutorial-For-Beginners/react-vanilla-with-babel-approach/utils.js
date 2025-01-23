@@ -13,9 +13,7 @@ class Page {
 
   // Static method to create a Page instance from raw data
   static fromData(name, link, children = []) {
-    const childPages = children.map((child) =>
-      Page.fromData(child.name, child.link, child.children)
-    );
+    const childPages = children.map((child) => Page.fromData(child.name, child.link, child.children));
     return new Page(name, link, childPages);
   }
 }
@@ -23,57 +21,23 @@ class Page {
 // Example usage:
 // const pages = [
 //   new Page("0005-proj-03", "lessons/0005-proj-03/index.html"),
-//   new Page(
-//     "0001-layout-design",
-//     "lessons/0001-layout-design/index.html"
-//   ).addChildren(
+//   new Page("0001-layout-design", "lessons/0001-layout-design/index.html").addChildren(
 //     new Page("./with-container/001.html", "./with-container/001.html")
 //   ),
 // ];
 
 const pages = [
-  
-
-  Page.fromData("lessons/import-app-from-different-folder-v1", "").addChildren(
-    Page.fromData(
-      "import-app-from-different-folder-v1: One working example",
-      "import-app-from-different-folder-v1/index.html"
-    ),
-    Page.fromData(
-      "with-container-fluid/001.html",
-      "lessons/0002-responsive-layouts/with-container-fluid/001.html"
-    ),
-    Page.fromData(
-      "with-container-fluid/002.html",
-      "lessons/0002-responsive-layouts/with-container-fluid/002.html"
-    )
+  Page.fromData("lessons: import-app-from-different-folder-v1: working example", "").addChildren(
+    Page.fromData("index.html", "import-app-from-different-folder-v1/index.html")
   ),
 
-  Page.fromData(
-    "lessons/0003-live-poroject-01-grid-and-layout-design",
-    ""
-  ).addChildren(
-    Page.fromData(
-      "IBM-2-column-layout.v1.html",
-      "lessons/0003-live-poroject-01-grid-and-layout-design/IBM-2-column-layout.v1.html"
-    )
+  Page.fromData("lessons: import-app-from-different-folder-v2: working examples", "").addChildren(
+    Page.fromData("001.html", "import-app-from-different-folder-v2/001.html"),
+    Page.fromData("002.html", "import-app-from-different-folder-v2/002.html"),
+    Page.fromData("003.html", "import-app-from-different-folder-v2/003.html"),
+    Page.fromData("004.html: not working", "import-app-from-different-folder-v2/004.html"),
+    Page.fromData("cosmos-layout-v2.html", "import-app-from-different-folder-v2/cosmos-layout-v2.html")
   ),
-
-  Page.fromData("lessons/0004-proj-02", "").addChildren(
-    Page.fromData(
-      "cosmos-layout-v1.html",
-      "lessons/0004-proj-02/cosmos-layout-v1.html"
-    ),
-    Page.fromData(
-      "cosmos-layout-v2.html",
-      "lessons/0004-proj-02/cosmos-layout-v2.html"
-    )
-  ),
-
-  Page.fromData(
-    "lessons/0005-proj-03",
-    ""
-  ).addChildren(Page.fromData("Apple's Footer Link", "lessons/0005-proj-03/index.html")),
 ];
 
 // Logging the output
