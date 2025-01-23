@@ -1,4 +1,13 @@
-import "./styles.v1.scss"
+import "./styles.v1.scss";
+
+const listItenArr = () => {
+  const arr: string[] = [];
+  for (let i = 0; i < 100; i++) {
+    arr.push("A simple primary list group item: " + (i + 1));
+    arr.push("A simple secondary list group item " + (i + 1));
+  }
+  return arr;
+};
 const IBMColumnLayoutV1 = () => {
   return (
     <div>
@@ -43,183 +52,11 @@ const IBMColumnLayoutV1 = () => {
           <div className="col-3 sidebar">
             <ul className="list-group">
               <li className="list-group-item">A simple default list group item</li>
-
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple primary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple secondary list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple success list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple danger list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple warning list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple info list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple light list group item</li>
-              <li className="list-group-item list-group-item-dark">A simple dark list group item</li>
+              {listItenArr().map((item, idx) => (
+                <li key={`idx_${idx + 1}`} className="list-group-item list-group-item-dark">
+                  {item}
+                </li>
+              ))}
             </ul>
           </div>
           {/* <!-- ./col-3 --> */}
