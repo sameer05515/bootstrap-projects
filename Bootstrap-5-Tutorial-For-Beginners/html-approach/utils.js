@@ -59,6 +59,17 @@ const pages = [
       "lessons/0001-layout-design/with-container-fluid/004.html"
     )
   ),
+
+  Page.fromData("0004-proj-02", "").addChildren(
+    Page.fromData(
+      "cosmos-layout-v1.html",
+      "lessons/0004-proj-02/cosmos-layout-v1.html"
+    ),
+    Page.fromData(
+      "cosmos-layout-v2.html",
+      "lessons/0004-proj-02/cosmos-layout-v2.html"
+    )
+  ),
 ];
 
 // Logging the output
@@ -87,7 +98,7 @@ const pages = [
 
 // Function to generate a single list item
 const createListItem = ({ name, link, children }) => {
-  const linkStr = link ? `<a href="${link}">${name}</a> ` : name;
+  const linkStr = link ? `<a href="${link}">${name}</a> ` : `<b>${name}</b>`;
   const aa = `
   <li class="list-group-item text-wrap">           
     ${linkStr}
