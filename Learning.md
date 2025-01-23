@@ -78,3 +78,18 @@
 
 - **See related practicals**:
   - See [here](./Bootstrap-5-Tutorial-For-Beginners/html-approach/lessons/0006-navbars/)
+
+
+## [Bootstrap Card](https://www.youtube.com/watch?v=5ImiW-MdRxo&list=PLp50dWW_m40WzAh2wY0a9iFYb0QlPzoxx&index=10)
+
+- What are different utility classes available in Bootstrap 5 `Card`?
+- Tell us more about below Bootstrap 5 `Card` classes:-
+  - `card`
+  - `card-body`
+  - `card-title`
+  - `card-subtitle`
+  - `card-text`
+  - `card-link`
+
+- **See related practicals**:
+  - See [here](./Bootstrap-5-Tutorial-For-Beginners/html-approach/lessons/0007-cards/)
