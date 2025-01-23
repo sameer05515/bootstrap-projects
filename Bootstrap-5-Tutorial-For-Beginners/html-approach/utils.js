@@ -1,5 +1,14 @@
+class Page{
+    constructor(name, link) {
+        this.name = name;
+        this.link = link;
+      }
+}
+
+
 const pages = [
   { name: "0005-proj-03", link: "lessons/0005-proj-03/index.html" },
+  new Page("0001-layout-design")
 ];
 
 const ulElement = document.getElementById("nav-links-on-home-page");
