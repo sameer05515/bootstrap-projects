@@ -13,9 +13,7 @@ class Page {
 
   // Static method to create a Page instance from raw data
   static fromData(name, link, children = []) {
-    const childPages = children.map((child) =>
-      Page.fromData(child.name, child.link, child.children)
-    );
+    const childPages = children.map((child) => Page.fromData(child.name, child.link, child.children));
     return new Page(name, link, childPages);
   }
 }
@@ -32,72 +30,38 @@ class Page {
 // ];
 
 const pages = [
-  Page.fromData(
-    "lessons/0001-layout-design",
-    "lessons/0001-layout-design/index.html"
-  ).addChildren(
-    Page.fromData(
-      "./with-container/001.html",
-      "lessons/0001-layout-design/with-container/001.html"
-    ),
-    Page.fromData(
-      "./with-container-fluid/001.html",
-      "lessons/0001-layout-design/with-container-fluid/001.html"
-    ),
-    Page.fromData(
-      "./with-container-fluid/002.html",
-      "lessons/0001-layout-design/with-container-fluid/002.html"
-    ),
-    Page.fromData(
-      "./with-container-fluid/003.html",
-      "lessons/0001-layout-design/with-container-fluid/003.html"
-    ),
-    Page.fromData(
-      "./with-container-fluid/004.html",
-      "lessons/0001-layout-design/with-container-fluid/004.html"
-    )
+  Page.fromData("login-registration-forms-testing", "").addChildren(
+    Page.fromData("index.html", "lessons/login-regn-forms-testing/index.html"),
+    Page.fromData("experiment-pages/Check-Row-Column.html", "lessons/login-regn-forms-testing/experiment-pages/Check-Row-Column.html"),
+    Page.fromData("forms/login-form.html", "lessons/login-regn-forms-testing/forms/login-form.html"),
+    Page.fromData("forms/registration-form.html", "lessons/login-regn-forms-testing/forms/registration-form.html")
+  ),
+
+  Page.fromData("lessons/0001-layout-design", "").addChildren(
+    Page.fromData("index.html", "lessons/0001-layout-design/index.html"),
+    Page.fromData("./with-container/001.html", "lessons/0001-layout-design/with-container/001.html"),
+    Page.fromData("./with-container-fluid/001.html", "lessons/0001-layout-design/with-container-fluid/001.html"),
+    Page.fromData("./with-container-fluid/002.html", "lessons/0001-layout-design/with-container-fluid/002.html"),
+    Page.fromData("./with-container-fluid/003.html", "lessons/0001-layout-design/with-container-fluid/003.html"),
+    Page.fromData("./with-container-fluid/004.html", "lessons/0001-layout-design/with-container-fluid/004.html")
   ),
 
   Page.fromData("lessons/0002-responsive-layouts", "").addChildren(
-    Page.fromData(
-      "with-container/001.html",
-      "lessons/0002-responsive-layouts/with-container/001.html"
-    ),
-    Page.fromData(
-      "with-container-fluid/001.html",
-      "lessons/0002-responsive-layouts/with-container-fluid/001.html"
-    ),
-    Page.fromData(
-      "with-container-fluid/002.html",
-      "lessons/0002-responsive-layouts/with-container-fluid/002.html"
-    )
+    Page.fromData("with-container/001.html", "lessons/0002-responsive-layouts/with-container/001.html"),
+    Page.fromData("with-container-fluid/001.html", "lessons/0002-responsive-layouts/with-container-fluid/001.html"),
+    Page.fromData("with-container-fluid/002.html", "lessons/0002-responsive-layouts/with-container-fluid/002.html")
   ),
 
-  Page.fromData(
-    "lessons/0003-live-poroject-01-grid-and-layout-design",
-    ""
-  ).addChildren(
-    Page.fromData(
-      "IBM-2-column-layout.v1.html",
-      "lessons/0003-live-poroject-01-grid-and-layout-design/IBM-2-column-layout.v1.html"
-    )
+  Page.fromData("lessons/0003-live-poroject-01-grid-and-layout-design", "").addChildren(
+    Page.fromData("IBM-2-column-layout.v1.html", "lessons/0003-live-poroject-01-grid-and-layout-design/IBM-2-column-layout.v1.html")
   ),
 
   Page.fromData("lessons/0004-proj-02", "").addChildren(
-    Page.fromData(
-      "cosmos-layout-v1.html",
-      "lessons/0004-proj-02/cosmos-layout-v1.html"
-    ),
-    Page.fromData(
-      "cosmos-layout-v2.html",
-      "lessons/0004-proj-02/cosmos-layout-v2.html"
-    )
+    Page.fromData("cosmos-layout-v1.html", "lessons/0004-proj-02/cosmos-layout-v1.html"),
+    Page.fromData("cosmos-layout-v2.html", "lessons/0004-proj-02/cosmos-layout-v2.html")
   ),
 
-  Page.fromData(
-    "lessons/0005-proj-03",
-    ""
-  ).addChildren(Page.fromData("Apple's Footer Link", "lessons/0005-proj-03/index.html")),
+  Page.fromData("lessons/0005-proj-03", "").addChildren(Page.fromData("Apple's Footer Link", "lessons/0005-proj-03/index.html")),
 ];
 
 // Logging the output
