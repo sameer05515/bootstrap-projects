@@ -25,7 +25,7 @@ const getLinks = (pages = []) => {
             ${
               children && children.length > 0
                 ? `
-                <ul class="list-group m-5 p-5">
+                <ul class="list-group ml-2">
                 ${getLinks(children)}
                 </ul>
                 `
