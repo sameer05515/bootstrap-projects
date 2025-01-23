@@ -33,24 +33,26 @@ const pages = [
   Page.fromData("login-registration-forms-testing", "").addChildren(
     Page.fromData("index.html", "lessons/login-regn-forms-testing/index.html"),
     Page.fromData("experiment-pages", "").addChildren(
-      Page.fromData("Check-Row-Column.html", "lessons/login-regn-forms-testing/experiment-pages/Check-Row-Column.html"),
+      Page.fromData("Check-Row-Column.html", "lessons/login-regn-forms-testing/experiment-pages/Check-Row-Column.html")
     ),
 
     Page.fromData("forms", "").addChildren(
       Page.fromData("login-form.html", "lessons/login-regn-forms-testing/forms/login-form.html"),
       Page.fromData("registration-form.html", "lessons/login-regn-forms-testing/forms/registration-form.html")
-    ),
-    
-    
+    )
   ),
 
   Page.fromData("lessons/0001-layout-design", "").addChildren(
     Page.fromData("index.html", "lessons/0001-layout-design/index.html"),
-    Page.fromData("./with-container/001.html", "lessons/0001-layout-design/with-container/001.html"),
-    Page.fromData("./with-container-fluid/001.html", "lessons/0001-layout-design/with-container-fluid/001.html"),
-    Page.fromData("./with-container-fluid/002.html", "lessons/0001-layout-design/with-container-fluid/002.html"),
-    Page.fromData("./with-container-fluid/003.html", "lessons/0001-layout-design/with-container-fluid/003.html"),
-    Page.fromData("./with-container-fluid/004.html", "lessons/0001-layout-design/with-container-fluid/004.html")
+
+    Page.fromData("with-container", "").addChildren(Page.fromData("001.html", "lessons/0001-layout-design/with-container/001.html")),
+
+    Page.fromData("with-container-fluid", "").addChildren(
+      Page.fromData("001.html", "lessons/0001-layout-design/with-container-fluid/001.html"),
+      Page.fromData("002.html", "lessons/0001-layout-design/with-container-fluid/002.html"),
+      Page.fromData("003.html", "lessons/0001-layout-design/with-container-fluid/003.html"),
+      Page.fromData("004.html", "lessons/0001-layout-design/with-container-fluid/004.html")
+    )
   ),
 
   Page.fromData("lessons/0002-responsive-layouts", "").addChildren(
