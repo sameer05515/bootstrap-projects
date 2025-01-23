@@ -93,3 +93,23 @@
 
 - **See related practicals**:
   - See [here](./Bootstrap-5-Tutorial-For-Beginners/html-approach/lessons/0007-cards/)
+
+
+## [Bootstrap Text](https://www.youtube.com/watch?v=PuOc6Ut-Zyg&list=PLp50dWW_m40WzAh2wY0a9iFYb0QlPzoxx&index=42)
+- What are different utility classes available in Bootstrap 5 `Text`?
+- Tell us more about below Bootstrap 5 `Text` classes:-
+  - `text-start`
+  - `text-center`
+  - `text-end`
+  - `text-wrap`
+  - `text-break`
+  - `text-lowercase`
+  - `text-uppercase`
+  - `fs-1` / `fs-2` / `fs-3` / `fs-4` / `fs-5` 
+  - `lh-1` / `lg-base` / `lh-lg`
+  - `text-decoration-underline` / `text-decoration-line-through` / `text-decoration-none` 
+
+
+
+
+## Typography
